@@ -49,10 +49,10 @@ used to derive the concrete notations, as well as to validate and test implement
 
 This document is organized as follows:
 
-- Section 2 defines the basic concepts and notation of the abstract
+- Section 2 defines the basic concepts of abstract CSDL and the notion of a well formed abstract
   CSDL model.
 
-- Section 3 specifies the abstract syntax and semantics of the
+- Section 3 specifies the abstract semantics of the
   abstract CSDL model.
 
 - Section 4 shows how the concrete CSDL notations can be derived from
@@ -67,11 +67,14 @@ This document is organized as follows:
 The Common Schema Definition Language (CSDL) is a language for defining
 data models that can be exposed as RESTful services. CSDL can be
 represented in two different formats: XML and JSON. Both formats have
-the same expressive power and can describe the same set of data models,
+the same expressive power and can describe the same set of data models and services,
 but they have different syntax and conventions. In this document, we
 define an abstract CSDL model that captures the essential features of
 both formats and serves as a common ground for understanding and
 manipulating CSDL documents.
+
+THe abstract CSDL model is a graph of the types, functions, schemata and their components
+that combined describe the interface of the OData REST service.
 
 The abstract CSDL model consists of a set of **model elements**, each with
 
@@ -109,7 +112,7 @@ CSDL model:
   and relationship.
 
 The abstract CSDL model is independent of any concrete notation or
-format. However, it can be serialized and deserialized using different
+format. However, it can be represented different
 formats, such as XML or JSON. In this document, we also describe the
 mapping rules between the abstract CSDL model and its concrete
 representations. The mapping rules define the following aspects of the
@@ -140,7 +143,7 @@ formats, we aim to achieve the following goals:
 
 ## Abstract CSDL model
 
-This document describes the abstract CSDL model elements of OData 4.01.
+This section describes the abstract CSDL model elements (aka meta model) of OData 4.01.
 
 ### Table of contents
 
